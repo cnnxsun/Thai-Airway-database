@@ -34,7 +34,7 @@ FROM passenger
 
 
 
--- 7 #รันไม่ได้
+-- 7 
 SELECT Total_passenger_No, Seat_No, Flight_No  # change total to the first row
    FROM Seat
    INNER JOIN Flight
@@ -48,14 +48,14 @@ SELECT Pay_ID, Patment_date, P_code
    ON  Payment.Promotion_code = promotion.P_code
 WHERE Percentage_discount < 10;
 
--- 9 #รันไม่ได้
+-- 9 
 SELECT Boarding_No, Price, Purchasing_date
 FROM boardingpass
 INNER JOIN ticket ON  boardingpass.Boarding_No = ticket.Boarding_No
 WHERE Special_meal IS NOT NULL
 ORDER BY Purchasing_date ASC;
 
--- 10 #รันไม่ได้
+-- 10 
 SELECT  Seat_No, Seat_type, Seat_class, Flight_No
    FROM Seat
    LEFT JOIN seat_color
